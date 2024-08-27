@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jasmine/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["jasmine", "@typescript-eslint", "prettier"],
+  "ignorePatterns": [
+    "dist/**/*"
+  ],
+  "rules": {
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "none",
+        "printWidth": 100,
+        "semi": true,
+        "parser": "typescript"
+      }
+    ],
+    "jasmine/no-spec-dupes": ["warn", "branch"],
+    "jasmine/no-suite-dupes": ["warn", "branch"],
+    "complexity": ["warn", 7],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "object-shorthand": ["error", "always", { "avoidQuotes": true }],
+    "comma-dangle": ["warn", "never"],
+    "consistent-return": "off",
+    "no-restricted-properties":"off",
+    "no-unused-vars": "off"
+  }
+}
